@@ -1,0 +1,16 @@
+create database tuncafatura;
+use tuncafatura;
+
+create table firmakartlari  (sirano int NOT NULL AUTO_INCREMENT, firmaunvani varchar(500), adres varchar(1000) , vergino varchar(100), vergidairesi varchar(50), sehir varchar(50),primary key(sirano));
+insert into firmakartlari (firmaunvani,adres,vergino,vergidairesi,sehir) values ('Deneme Firması','Deneme sokak no:75 Tunca','123456789','DururDurmaz','ADANA');
+
+create table stoklar  (sirano int NOT NULL AUTO_INCREMENT, stokadi varchar(500), kdvorani int , primary key(sirano));
+insert into stoklar (stokadi,kdvorani) values ( 'Nakliye Bedeli',18);
+
+create table numarator (sirano int NOT NULL AUTO_INCREMENT, uuid varchar(100),primary key(sirano));
+
+CREATE TABLE sehirler (id int NOT NULL AUTO_INCREMENT,sehiradi VARCHAR(255) NULL,PRIMARY KEY (id));
+//https://www.tasarimkodlama.com/veritabani/mysql/mysql-turkiye-il-ve-ilce-veritabani/
+
+create table arsiv  (sirano int NOT NULL AUTO_INCREMENT, tarih date, alici varchar(500), faturano varchar(200) ,toplamvergi varchar(100),toplamtutar varchar(100) ,primary key(sirano));
+
